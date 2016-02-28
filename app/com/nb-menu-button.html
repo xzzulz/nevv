@@ -4,21 +4,30 @@
   <template>
 
     <style>
-      :host{
+      :host {
         display: inline-block;
         background-color: #265e60;
         color: #3bb8bc;
         width: 18vh;
         padding: 3vh 3vh;
-        box-shadow: 2vh 2vh #1c4647;
+        box-shadow: 2vh 2vh #1c4147;
         margin: 3vh 1vw;
         font-size: 3vh;
         font-weight: bold;
         cursor: pointer;
+        position: relative;
+        transition: transform .2s, box-shadow .2s;
+      }
+      :host:hover {
+        background-color: #2c6c6e;
+      }
+      :host:active {
+        transform: translateX(2vh) translateY(2vh);
+        box-shadow: 0vh 0vh #1c4147;
       }
     </style>
 
-    <div><content></content></div>
+    <content></content>
 
   </template>
 
