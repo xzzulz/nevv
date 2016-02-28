@@ -1,0 +1,59 @@
+
+<dom-module id="nb-story-item">
+
+  <template>
+
+    <style>
+      :host{
+        display: block;
+        position: relative;
+        background-color: #246b76;
+        color: #3bb8bc;
+        width: 90%;
+        padding: .8vh .8vh;
+        box-shadow: 1vh 1vh #295c67;
+        margin: 3vh auto;
+      }
+      #icon {
+        width: 6vh;
+        padding: 1vh 1vh .5vh;
+        cursor: pointer;
+      }
+      #info {
+        display: block;
+        position: absolute;
+        left: 10vh;
+        top: 1vh;
+        height: 7vh;
+        overflow: hidden;
+        padding: 0px 0px .2vh;
+      }
+      #title {
+        font-size: 3.2vh;
+        cursor: pointer;
+        height: 4vh;
+        overflow: hidden;
+      }
+      #points {
+        font-size: 2.3vh;
+        color: #25525b;
+      }
+    </style>
+
+    <div>
+      <img id="icon" src="up.svg">
+      <div id="info">
+        <div id="title"><content></content></div>
+        <div id="points">35 points</div>
+      </div>
+    </div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is:"nb-story-item",
+    });
+  </script>
+
+</dom-module>

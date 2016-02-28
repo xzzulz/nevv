@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Newsbox app</title>
+  <title>Newsbox demo app</title>
 
   <link rel="stylesheet" href="styles/main.css">
 
@@ -14,9 +14,11 @@
   <!--<link rel="import" href="elements/elements.html">-->
   <link rel="import"href="lib/polymer.html">
   <link rel="import" href="com/nb-menu-overlay/nb-menu-overlay.html">
+  <link rel="import" href="com/nb-user-name.html">
 
   <link rel="import" href="com/nb-2panel.html">
-  <link rel="import" href="com/nb-story-item.html">
+  <link rel="import" href="com/nb-menu-button.html">
+  <link rel="import" href="com/nb-story-item/nb-story-item.html">
 
   <!-- For shared styles, shared-styles.html import in elements.html
   <style is="custom-style" include="shared-styles"></style>-->
@@ -24,24 +26,26 @@
 
 <body unresolved>
 
-
-
   <nb-2panel>
-      <nb-story-item>A simple story</nb-story-item>
-      <nb-story-item>Another story</nb-story-item>
-      <nb-story-item>Another story</nb-story-item>
-      <nb-story-item>Another story</nb-story-item>
-      <nb-story-item>Another story</nb-story-item>
-      <nb-story-item>Another story</nb-story-item>
-      <nb-story-item>A simple story</nb-story-item>
-      <nb-story-item>Another story</nb-story-item>
-      <nb-story-item>Another story</nb-story-item>
-      <nb-story-item>Another story</nb-story-item>
-      <nb-story-item>Another story</nb-story-item>
-      <nb-story-item>Another story</nb-story-item>
+    <nb-menu-button id="pop" class="menu">Popular</nb-menu-button>
+    <nb-menu-button id="new" class="menu">New</nb-menu-button>
+    <nb-story-item>A simple story</nb-story-item>
+    <nb-story-item>Another story</nb-story-item>
+    <nb-story-item>Another story</nb-story-item>
+    <nb-story-item>Another story</nb-story-item>
+    <nb-story-item>Another story</nb-story-item>
+    <nb-story-item>Another story</nb-story-item>
+    <nb-story-item>A simple story</nb-story-item>
+    <nb-story-item>Another story</nb-story-item>
+    <nb-story-item>Another story Another story Another story Another story Another story Another story Another story</nb-story-item>
+    <nb-story-item>Another story</nb-story-item>
+    <nb-story-item>Another story</nb-story-item>
+    <nb-story-item>Another story</nb-story-item>
   </nb-2panel>
 
-  <nb-menu-overlay></nb-menu-overlay>
+  <nb-user-name>someusername</nb-user-name>
+
+  <nb-menu-overlay>menu panel content</nb-menu-overlay>
 
 <!--
   <style>
