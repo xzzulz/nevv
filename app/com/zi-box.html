@@ -1,0 +1,40 @@
+<link rel="import"
+      href="../lib/polymer.html">
+      <link rel="import"
+            href="zi-item.html">
+
+<dom-module id="zi-box">
+
+  <template>
+
+    <h2>{{box}}</h2>
+    <div>
+      <zi-item id='one'></zi-item>
+      <zi-item id='two'></zi-item>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: "zi-box",
+      properties: {
+
+        box: {
+          type: String,
+          value: "Fruits"
+        }
+      },
+
+      ready: function() {
+        console.log('zi-box ready')
+        var one = this.$.one
+        console.log('one:', one)
+        console.log('one.obj:', one.obj)
+        console.log('one.someMethod:', one.someMethod)
+      }
+    });
+
+    console.log('from zi-box zi:', zi)
+  </script>
+
+</dom-module>

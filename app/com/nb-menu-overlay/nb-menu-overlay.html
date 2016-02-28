@@ -1,0 +1,72 @@
+
+
+<dom-module id="nb-menu-overlay">
+
+  <template>
+
+    <style>
+      :host {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      #menubutton {
+        position: absolute;
+        cursor: pointer;
+        width: 15vh;
+        height: 15vh;
+      }
+      #menupanel {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,41,45,.8);
+        color: #121a2b
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform .5s;
+      }
+      #closebutton {
+        position: absolute;
+        cursor: pointer;
+        width: 15vh;
+        height: 15vh;
+      }
+
+      }
+    </style>
+
+    <img id="menubutton" on-tap="showmenu" src="menubutton.svg">
+    <div id="menupanel">
+      <img id="closebutton" on-tap="hidemenu" src="closebutton.svg">
+      menu panel menu panel menu panel menu panel
+    </div>
+
+
+  </template>
+
+  <script>
+    (function () {
+
+      var menu = null
+
+      Polymer({
+        is:"nb-menu-overlay",
+        ready: function() {
+          menu = this.$.menupanel
+        },
+        showmenu: function() {
+          menu.style.transform = 'translateY(0%)'
+        },
+        hidemenu: function() {
+          menu.style.transform = 'translateY(-100%)'
+        }
+      });
+
+    }())
+  </script>
+
+</dom-module>

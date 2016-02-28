@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Newsbox app</title>
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  <script src="lib/webcomponents-lite.min.js"></script>
+
+  <!--<link rel="import" href="elements/elements.html">-->
+  <link rel="import"href="lib/polymer.html">
+  <link rel="import" href="com/nb-menu-overlay/nb-menu-overlay.html">
+
+  <link rel="import" href="com/nb-2panel.html">
+  <link rel="import" href="com/nb-story-item.html">
+
+  <!-- For shared styles, shared-styles.html import in elements.html
+  <style is="custom-style" include="shared-styles"></style>-->
+</head>
+
+<body unresolved>
+
+
+
+  <nb-2panel>
+      <nb-story-item>A simple story</nb-story-item>
+      <nb-story-item>Another story</nb-story-item>
+      <nb-story-item>Another story</nb-story-item>
+      <nb-story-item>Another story</nb-story-item>
+      <nb-story-item>Another story</nb-story-item>
+      <nb-story-item>Another story</nb-story-item>
+      <nb-story-item>A simple story</nb-story-item>
+      <nb-story-item>Another story</nb-story-item>
+      <nb-story-item>Another story</nb-story-item>
+      <nb-story-item>Another story</nb-story-item>
+      <nb-story-item>Another story</nb-story-item>
+      <nb-story-item>Another story</nb-story-item>
+  </nb-2panel>
+
+  <nb-menu-overlay></nb-menu-overlay>
+
+<!--
+  <style>
+    #left {
+      display: inline-block;
+      width: 30%;
+      height: 100vh;
+      background-color: blue;
+    }
+    #right {
+      display: inline-block;
+      width: 70%;
+      height: 100vh;
+      background-color: white;
+    }
+  </style>
+  <div id="left">abcd efgrkfsd sffs</div><div id="right">abcd efgrkfsd sffs</div>
+-->
+
+
+<!--
+  <style>
+    #flexbox {
+      display: flex;
+      flex-flow: row;
+      height: 100vh;
+    }
+    #left {
+      background-color: blue;
+      flex: 1 1 1px;
+    }
+    #right {
+      background-color: white;
+      flex: 3 1 1px;
+    }
+  </style>
+
+  <div id="flexbox">
+    <div id="left">abcd efgrkfsd sffs</div>
+    <div id="right">abcd efgrkfsd sffs</div>
+  </div>
+-->
+<!--
+  <zi-app>
+
+    <zi-model>
+      <zi-webservice></zi-webservice>
+    </zi-model>
+
+    <zi-view-model></zi-view-model>
+
+    <zi-menu><newsbox-menu></newsbox-menu></zi-menu>
+
+  </zi-app>
+-->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<link rel="import" href="../lib/polymer.html">
+
+<dom-module id="nb-menu-button">
+
+  <template>
+
+    <style>
+      :host{
+        display: inline-block;
+        background-color: #265e60;
+        color: #3bb8bc;
+        width: 18vh;
+        padding: 3vh 3vh;
+        box-shadow: 2vh 2vh #1c4647;
+        margin: 3vh 1vw;
+        font-size: 3vh;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+
+    <div><content></content></div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is:"nb-menu-button",
+    });
+  </script>
+
+</dom-module>

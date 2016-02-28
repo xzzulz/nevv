@@ -1,0 +1,68 @@
+<link rel="import" href="nb-menu-button.html">
+
+<dom-module id="nb-2panel">
+
+  <template>
+
+    <style>
+      :host {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #left {
+        color: #d0defe;
+        position: absolute;
+        box-sizing: border-box;
+        width: 30vw;
+        height: 100%;
+        padding: 8vw;
+      }
+      #right {
+        color: #121a2b;
+        position: absolute;
+        left: 30%;
+        width: 70vw;
+        height: 100vh;
+        overflow: scroll;
+      }
+      @media (max-width: 1000px) {
+        #left {
+          position: relative;
+          height: auto;
+          width: 100%;
+          padding: 2vw 0 2vh 20vh;
+        }
+        #right {
+          position: relative;
+          height: auto;
+          width: 100%;
+          left: 0px;
+        }
+      }
+    </style>
+
+    <div id="left">
+      <nb-menu-button id="pop">Popular</nb-menu-button>
+      <nb-menu-button id="new">New</nb-menu-button>
+    </div>
+    <div id="right">
+      <content></content>
+    </div>
+
+
+  </template>
+
+  <script>
+    (function () {
+
+      Polymer({
+        is:"nb-2panel",
+      });
+
+    }())
+  </script>
+
+</dom-module>
