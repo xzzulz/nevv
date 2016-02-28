@@ -6,6 +6,7 @@
     <style>
       :host{
         display: block;
+        position: relative;
         background-color: #246b76;
         color: #3bb8bc;
         width: 90%;
@@ -19,11 +20,19 @@
         cursor: pointer;
       }
       #info {
-        display: inline-block;
+        display: block;
+        position: absolute;
+        left: 10vh;
+        top: 1vh;
+        height: 7vh;
+        overflow: hidden;
+        padding: 0px 0px .2vh;
       }
       #title {
         font-size: 3.2vh;
         cursor: pointer;
+        height: 4vh;
+        overflow: hidden;
       }
       #points {
         font-size: 2.3vh;
