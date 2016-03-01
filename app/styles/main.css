@@ -2,5 +2,14 @@ body {
   font-family: Verdana, sans-serif;
   margin: 0;
   background-color: #2f5557;
-  color: #d0defe;
+  color: #3bb8bc;
+}
+
+nb-menu-page > nb-button {
+  width: 18vh;
+}
+@media (max-width: 1000px) {
+  nb-menu-page > nb-button {
+    width: 13vh;
+  }
 }
