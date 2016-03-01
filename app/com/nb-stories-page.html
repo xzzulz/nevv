@@ -1,0 +1,33 @@
+
+<dom-module id="nb-stories-page">
+
+  <template>
+
+    <style>
+      :host {
+        position: absolute;
+        left: 30vw;
+        width: 70vw;
+        height: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+      @media (max-width: 1000px) {
+        :host {
+          position: relative;
+          left: 0px;
+        }
+      }
+    </style>
+
+    <content></content>
+
+  </template>
+
+  <script>
+    Polymer({
+      is:"nb-stories-page",
+    });
+  </script>
+
+</dom-module>
