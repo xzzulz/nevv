@@ -1,0 +1,75 @@
+
+<dom-module id="nb-user-page">
+
+  <template>
+
+    <style>
+      :host {
+        position: absolute;
+        left: 50vw;
+        width: 50vw;
+        height: 100vh;
+      }
+      #box {
+        margin: 15vh 3vh;
+        width: 50vh;
+      }
+      # title {
+        margin: 10vh;
+      }
+      #box input {
+        margin: 1.5vh 0;
+        padding: .8vh;
+        background-color: #1c4647;
+        color: #3bb8bc;
+        border: none;
+        font-size: 3vh;
+      }
+      #buttons {
+        padding: 5vh 1vh 0;
+        position: relative;
+      }
+      #box > nb-button {
+        padding: 5vh 2vh 0 0;
+        display: block;
+      }
+      #signup {
+        display: inline-block;
+        background-color: #1c4647;
+        padding: 3vh;
+        font-weight: bold;
+        margin-left: 6vh;
+        cursor: pointer;
+      }
+      @media (max-width: 1000px) {
+        :host {
+          width: 100vw;
+          top: 44vh;
+          left: 0px;
+          height: auto;
+        }
+        #box {
+          margin: 2vh auto;
+        }
+      }
+    </style>
+
+    <div id="box">
+      <div id="title"><h3>User Sign in</h3></div>
+      <div><input id="user"></div>
+      <div><input id="pass" type="password"></div>
+      <div id="buttons">
+        <nb-button id="login">Login</nb-button>
+        <spam id="signup">Sign up</spam>
+      </div>
+    </div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is:"nb-user-page",
+    });
+  </script>
+
+</dom-module>

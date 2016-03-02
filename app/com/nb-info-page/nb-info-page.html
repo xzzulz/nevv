@@ -11,33 +11,34 @@
       }
       #logo {
         width: 60%;
-        padding: 5% 20% 2%;
+        margin: 5% 20% 2%;
       }
       #info {
         width: 60%;
-        padding: 2% 20% 5%;
+        margin: 2% auto 5%;
         font-size: 3vh;
       }
       @media (max-width: 1000px) {
         :host {
           width: 100vw;
         }
+        #logobox{
+          width: 30vmin;
+          margin: 0 auto;
+        }
         #logo {
-          width: 20vmin;
-          padding: 3vmin 30vmin 2vmin;
+          width: 30vh;
+          margin: 3vmin auto 0;
         }
         #info {
-          width: 90%;
-          padding: 1vmin 5vmin 1vmin;
-
+          width: 80%;
+          margin: 1vmin auto 1vmin;
         }
       }
     </style>
 
-
-      <img id="logo" src="nevv02.svg" alt="nevv">
+      <div id="logobox"><img id="logo" src="nevv02.svg" alt="nevv"></div>
       <div id="info">Nevv: demo app created to explore google polymer library.</div>
-
 
   </template>
 

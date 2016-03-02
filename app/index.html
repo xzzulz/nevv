@@ -15,6 +15,9 @@
 
   <link rel="import"href="lib/polymer.html">
   <link rel="import" href="com/nb-menu-overlay/nb-menu-overlay.html">
+  <link rel="import" href="com/nb-info-page/nb-info-page.html">
+  <link rel="import" href="com/nb-user-page.html">
+
   <link rel="import" href="com/nb-user-name.html">
 
   <link rel="import" href="com/nb-menu-page.html">
@@ -49,7 +52,12 @@
 
   <nb-user-name>someusername</nb-user-name>
 
-  <nb-menu-overlay>menu panel content</nb-menu-overlay>
+  <nb-menu-overlay>
+
+    <nb-info-page></nb-info-page>
+    <nb-user-page></nb-user-page>
+
+  </nb-menu-overlay>
 
   <script src="js/main.js"></script>
 </body>
