@@ -1,0 +1,51 @@
+
+<dom-module id="nb-info-page">
+
+  <template>
+
+    <style>
+      :host {
+        position: absolute;
+        width: 50vw;
+        height: 100vh;
+      }
+      #logo {
+        width: 60%;
+        margin: 5% 20% 2%;
+      }
+      #info {
+        width: 60%;
+        margin: 2% auto 5%;
+        font-size: 3vh;
+      }
+      @media (max-width: 1000px) {
+        :host {
+          width: 100vw;
+        }
+        #logobox{
+          width: 30vmin;
+          margin: 0 auto;
+        }
+        #logo {
+          width: 30vh;
+          margin: 3vmin auto 0;
+        }
+        #info {
+          width: 80%;
+          margin: 1vmin auto 1vmin;
+        }
+      }
+    </style>
+
+      <div id="logobox"><img id="logo" src="nevv02.svg" alt="nevv"></div>
+      <div id="info">Nevv: demo app created to explore google polymer library.</div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is:"nb-info-page",
+    });
+  </script>
+
+</dom-module>

@@ -1,0 +1,36 @@
+
+<dom-module id="nb-menu-page">
+
+  <template>
+
+    <style>
+      :host {
+        position: absolute;
+        top: 16vh;
+        left: 8vw;
+        display: flex;
+        flex-direction: column;
+      }
+      @media (max-width: 1000px) {
+        :host {
+          position: relative;
+          top: 0px;
+          left: 0px;
+          padding: 0px 0px 0px 17vh;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+
+    <content></content>
+
+  </template>
+
+  <script>
+    Polymer({
+      is:"nb-menu-page",
+    });
+  </script>
+
+</dom-module>

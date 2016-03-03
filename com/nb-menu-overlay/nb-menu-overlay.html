@@ -1,5 +1,4 @@
 
-
 <dom-module id="nb-menu-overlay">
 
   <template>
@@ -10,7 +9,6 @@
         left: 0;
         top: 0;
       }
-
       #menubutton {
         position: absolute;
         cursor: pointer;
@@ -18,10 +16,11 @@
         height: 15vh;
       }
       #menupanel {
-        position: absolute;
+        position: fixed;
+        top: 0px;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0,41,45,.8);
+        background-color: rgba(0,34,38,.9);
         color: #121a2b
         display: flex;
         justify-content: center;
@@ -34,8 +33,7 @@
         cursor: pointer;
         width: 15vh;
         height: 15vh;
-      }
-
+        z-index: 100;
       }
     </style>
 
@@ -44,7 +42,6 @@
       <img id="closebutton" on-tap="hidemenu" src="closebutton.svg">
       <content></content>
     </div>
-
 
   </template>
 

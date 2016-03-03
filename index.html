@@ -3,32 +3,39 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="">
+  <meta name="description" content="Nevv: A polymer library demo app">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Newsbox demo app</title>
+  <title>Nevv</title>
+
+  <link rel="icon" href="img/nevv.png">
 
   <link rel="stylesheet" href="styles/main.css">
 
   <script src="lib/webcomponents-lite.min.js"></script>
 
-  <!--<link rel="import" href="elements/elements.html">-->
   <link rel="import"href="lib/polymer.html">
   <link rel="import" href="com/nb-menu-overlay/nb-menu-overlay.html">
+  <link rel="import" href="com/nb-info-page/nb-info-page.html">
+  <link rel="import" href="com/nb-user-page.html">
+
   <link rel="import" href="com/nb-user-name.html">
 
-  <link rel="import" href="com/nb-2panel.html">
-  <link rel="import" href="com/nb-menu-button.html">
+  <link rel="import" href="com/nb-menu-page.html">
+  <link rel="import" href="com/nb-stories-page.html">
+
+  <link rel="import" href="com/nb-button.html">
   <link rel="import" href="com/nb-story-item/nb-story-item.html">
 
-  <!-- For shared styles, shared-styles.html import in elements.html
-  <style is="custom-style" include="shared-styles"></style>-->
 </head>
 
 <body unresolved>
 
-  <nb-2panel>
-    <nb-menu-button id="pop" class="menu">Popular</nb-menu-button>
-    <nb-menu-button id="new" class="menu">New</nb-menu-button>
+  <nb-menu-page class="left">
+    <nb-button id="pop">Popular</nb-button>
+    <nb-button id="new">New</nb-button>
+  </nb-menu-page>
+
+  <nb-stories-page class="right">
     <nb-story-item>A simple story</nb-story-item>
     <nb-story-item>Another story</nb-story-item>
     <nb-story-item>Another story</nb-story-item>
@@ -41,66 +48,17 @@
     <nb-story-item>Another story</nb-story-item>
     <nb-story-item>Another story</nb-story-item>
     <nb-story-item>Another story</nb-story-item>
-  </nb-2panel>
+  </nb-stories-page>
 
   <nb-user-name>someusername</nb-user-name>
 
-  <nb-menu-overlay>menu panel content</nb-menu-overlay>
+  <nb-menu-overlay>
 
-<!--
-  <style>
-    #left {
-      display: inline-block;
-      width: 30%;
-      height: 100vh;
-      background-color: blue;
-    }
-    #right {
-      display: inline-block;
-      width: 70%;
-      height: 100vh;
-      background-color: white;
-    }
-  </style>
-  <div id="left">abcd efgrkfsd sffs</div><div id="right">abcd efgrkfsd sffs</div>
--->
+    <nb-info-page></nb-info-page>
+    <nb-user-page></nb-user-page>
 
+  </nb-menu-overlay>
 
-<!--
-  <style>
-    #flexbox {
-      display: flex;
-      flex-flow: row;
-      height: 100vh;
-    }
-    #left {
-      background-color: blue;
-      flex: 1 1 1px;
-    }
-    #right {
-      background-color: white;
-      flex: 3 1 1px;
-    }
-  </style>
-
-  <div id="flexbox">
-    <div id="left">abcd efgrkfsd sffs</div>
-    <div id="right">abcd efgrkfsd sffs</div>
-  </div>
--->
-<!--
-  <zi-app>
-
-    <zi-model>
-      <zi-webservice></zi-webservice>
-    </zi-model>
-
-    <zi-view-model></zi-view-model>
-
-    <zi-menu><newsbox-menu></newsbox-menu></zi-menu>
-
-  </zi-app>
--->
   <script src="js/main.js"></script>
 </body>
 
