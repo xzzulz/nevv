@@ -6,30 +6,69 @@
 
     <style>
       :host{
-        background-color: #d0defe;
-        width: 100%
-        height: 100vh;
-        color: #121a2b;
-        display: inline-block;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: auto;
       }
     </style>
 
-    <h2>Stack</h2>
-    <div>
-      stack content
-      asfaf
-      sd
-      sdgasdg
-      SGSDG
-
-    </div>
+    <content></content>
 
   </template>
 
   <script>
-    Polymer({
-      is:"nb-panel-stack",
-    });
+    (function() {
+
+      var timer = 0
+
+      Polymer({
+        is:"nb-panel-stack",
+        properties: {
+          viewing: {
+            type: String,
+            observer: "switchPanel",
+          }
+        },
+
+        ready: function() {
+          var childs = Polymer.dom(this).children
+          childs.forEach(function(child){
+
+            child.style.opacity = 0.0
+            child.style.transition = 'opacity 1s'
+            child.style.display = 'none'
+          })
+          console.log(childs)
+          //this.$$('#new').style.display = 'none'
+        },
+
+        switchPanel: function(val, prev) {
+          console.log('switchPanel','val', val, 'prev', prev)
+          var neu,pre
+
+          if (val) neu = Polymer.dom(this).querySelector('#' + val)
+          if (prev) pre = Polymer.dom(this).querySelector('#' + prev)
+
+          if (neu) {
+            neu.style.display = 'block'
+            window.setTimeout(function() { neu.style.opacity = 1.0 }, 30)
+
+
+            //neu.style.display = 'block'
+          }
+          if (pre) {
+            pre.style.opacity = 0.0
+            window.clearTimeout(timer)
+            timer = window.setTimeout(function() { pre.style.display = 'none' }, 1000)
+            //neu.style.display = 'block'
+          }
+
+        }
+
+      });
+
+    })()
   </script>
 
 </dom-module>

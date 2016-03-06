@@ -1,0 +1,85 @@
+<linkrel="import"href="../lib/polymer.html">
+
+<dom-module id="nb-app">
+
+  <template>
+
+    <style>
+      :host{
+
+      }
+    </style>
+
+    <nb-menu-page class="left">
+      <nb-button id="pop" on-tap="viewPopular">Popular</nb-button>
+      <nb-button id="new" on-tap="viewNew">New</nb-button>
+    </nb-menu-page>
+
+    <nb-panel-stack viewing="{{viewing}}">
+
+      <nb-stories-page id="popular">
+        <nb-story-item>A simple story</nb-story-item>
+        <nb-story-item>Another story</nb-story-item>
+        <nb-story-item>Another story</nb-story-item>
+        <nb-story-item>Another story</nb-story-item>
+        <nb-story-item>Another story</nb-story-item>
+        <nb-story-item>Another story</nb-story-item>
+        <nb-story-item>A simple story</nb-story-item>
+        <nb-story-item>Another story</nb-story-item>
+        <nb-story-item>Another story Another story Another story Another story Another story Another story Another story</nb-story-item>
+        <nb-story-item>Another story</nb-story-item>
+        <nb-story-item>Another story</nb-story-item>
+        <nb-story-item>Another story</nb-story-item>
+      </nb-stories-page>
+
+      <nb-stories-page id="new">
+        <nb-story-item>new</nb-story-item>
+        <nb-story-item>new</nb-story-item>
+        <nb-story-item>new</nb-story-item>
+        <nb-story-item>new</nb-story-item>
+        <nb-story-item>new</nb-story-item>
+        <nb-story-item>new</nb-story-item>
+        <nb-story-item>new</nb-story-item>
+        <nb-story-item>new</nb-story-item>
+        <nb-story-item>new</nb-story-item>
+        <nb-story-item>new</nb-story-item>
+      </nb-stories-page>
+
+    </nb-panel-stack>
+
+    <nb-user-name>someusername</nb-user-name>
+
+    <nb-menu-overlay>
+
+      <nb-info-page></nb-info-page>
+      <nb-user-page></nb-user-page>
+
+    </nb-menu-overlay>
+
+  </template>
+
+  <script>
+    Polymer({
+      is:"nb-app",
+
+      properties: {
+        viewing: {
+          type: String,
+          value: "popular",
+          notify: true,
+        }
+      },
+
+      viewPopular: function() {
+        console.log('viewPopular')
+        this.viewing = 'popular'
+      },
+      viewNew: function() {
+        console.log('viewNew')
+        this.viewing = 'new'
+      },
+
+    });
+  </script>
+
+</dom-module>

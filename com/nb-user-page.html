@@ -12,10 +12,10 @@
       }
       #box {
         margin: 15vh 3vh;
-        width: 50vh;
+        width: 60vh;
       }
-      # title {
-        margin: 10vh;
+      #title {
+        margin: 3vh;
       }
       #box input {
         margin: 1.5vh 0;
@@ -26,7 +26,7 @@
         font-size: 3vh;
       }
       #buttons {
-        padding: 5vh 1vh 0;
+        padding: 5vh 0vh 0 5vh;
         position: relative;
       }
       #box > nb-button {
@@ -37,6 +37,7 @@
         display: inline-block;
         background-color: #1c4647;
         padding: 3vh;
+        font-size: 3vh;
         font-weight: bold;
         margin-left: 6vh;
         cursor: pointer;
@@ -55,9 +56,9 @@
     </style>
 
     <div id="box">
-      <div id="title"><h3>User Sign in</h3></div>
-      <div><input id="user"></div>
-      <div><input id="pass" type="password"></div>
+      <div id="title"><h3>User Login</h3></div>
+      <div><label>User: <input id="user" type="text"></label></div>
+      <div><label>Pass: <input id="pass" type="password"></label></div>
       <div id="buttons">
         <nb-button id="login">Login</nb-button>
         <spam id="signup">Sign up</spam>
