@@ -34,17 +34,13 @@
         ready: function() {
           var childs = Polymer.dom(this).children
           childs.forEach(function(child){
-
             child.style.opacity = 0.0
             child.style.transition = 'opacity 1s'
             child.style.display = 'none'
           })
-          console.log(childs)
-          //this.$$('#new').style.display = 'none'
         },
 
         switchPanel: function(val, prev) {
-          console.log('switchPanel','val', val, 'prev', prev)
           var neu,pre
 
           if (val) neu = Polymer.dom(this).querySelector('#' + val)
@@ -53,15 +49,11 @@
           if (neu) {
             neu.style.display = 'block'
             window.setTimeout(function() { neu.style.opacity = 1.0 }, 30)
-
-
-            //neu.style.display = 'block'
           }
           if (pre) {
             pre.style.opacity = 0.0
             window.clearTimeout(timer)
             timer = window.setTimeout(function() { pre.style.display = 'none' }, 1000)
-            //neu.style.display = 'block'
           }
 
         }
