@@ -1,10 +1,10 @@
-![nevv](http://nzonbi.github.io/nevv/img/nevv.svg)
+![nevv](http://xzzulz.github.io/nevv/img/nevv.svg)
 
 # Nevv
 
 Polymer exploration/demo app. Nevv is a fictional news reader.
 
-The app is here: [Nevv](http://nzonbi.github.io/nevv)
+The app is here: [Nevv](http://xzzulz.github.io/nevv)
 
 ## Polymer and web components
 
